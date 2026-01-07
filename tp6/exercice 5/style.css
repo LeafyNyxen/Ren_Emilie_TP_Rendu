@@ -1,0 +1,142 @@
+body{
+    background:#0b0e1a;
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+    font-family:'Arial',sans-serif;
+}
+
+.banner{
+    width:728px;
+    height:90px;
+    position:relative;
+    overflow:hidden;
+    background:radial-gradient(circle at 20% 50%, #5b7cff, #0b0e1a 70%);
+    border:2px solid #5b7cff;
+    box-shadow:0 0 20px rgba(91,124,255,0.7);
+}
+
+.energy{
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:linear-gradient(120deg, transparent 40%, rgba(91,124,255,0.25), transparent 60%);
+    animation: energyMove 4s linear infinite;
+}
+
+@keyframes energyMove{
+    from{transform:translateX(-50%) translateY(-50%) rotate(0deg);}
+    to{transform:translateX(-50%) translateY(-50%) rotate(360deg);}
+}
+
+.text{
+    position:absolute;
+    left:30px;
+    top:22px;
+    font-size:26px;
+    font-weight:bold;
+    color:#ffffff;
+    opacity:0;
+    text-shadow:0 0 10px #5b7cff;
+    animation:textFade 2s forwards, glow 2s infinite alternate 2s;
+}
+
+@keyframes textFade{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 5px #5b7cff;}
+    to{text-shadow:0 0 20px #9db0ff;}
+}
+
+.image{
+    position:absolute;
+    right:-150px;
+    top:0;
+    height:90px;
+    animation: imageIn 2.5s ease-out forwards;
+}
+
+@keyframes imageIn{
+    from{right:-150px; transform:scale(0.6); opacity:0;}
+    to{right:10px; transform:scale(1); opacity:1;}
+}
+
+
+.comment-section {
+    margin-top: 50px; /* Espace entre la bannière et le commentaire */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.herta-bubble {
+    display: inline-block;
+    max-width: 700px;
+    background-color: #f4f0ff;
+    border: 3px solid #7d5bbe;
+    border-radius: 25px;
+    padding: 20px 40px;
+    box-shadow: 6px 6px 0px #7d5bbe;
+    text-align: center;
+}
+
+.bubble-tag {
+    display: block;
+    color: #7d5bbe;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+.herta-bubble p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.back-home {
+    position: fixed; /* Reste visible même quand on scrolle */
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: #7d5bbe; /* Violet Herta */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(125, 91, 190, 0.3);
+    z-index: 1000; /* Passe au-dessus de tout */
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.back-home:hover {
+    background-color: #4b307d; /* Violet plus foncé au survol */
+    transform: translateX(5px); /* Petit mouvement vers la droite */
+    box-shadow: 0 6px 15px rgba(75, 48, 125, 0.4);
+}
+
+.back-home .icon {
+    font-size: 1.1rem;
+}
+
+/* On cache le bouton sur les très petits écrans si besoin, 
+   ou on le rend plus discret */
+@media (max-width: 480px) {
+    .back-home {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}

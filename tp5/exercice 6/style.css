@@ -1,0 +1,117 @@
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Sections parallax */
+        .parallax {
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .bg1 {
+            background-image: url("https://fastcdn.hoyoverse.com/content-v2/hkrpg/127987/a6fc0db8f25d69edebe5b6bd2b1eadd0_6461653671271967974.png");
+        }
+
+        .bg2 {
+            background-image: url("https://fastcdn.hoyoverse.com/content-v2/hkrpg/160601/32ccf6499b1655c70be410997d3c64e0_4983933500648332003.jpg");
+        }
+
+        /* Contenu texte */
+        .content {
+            padding: 60px;
+            background: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        
+.comment-section {
+    margin: 60px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.herta-bubble {
+    display: inline-block;
+    max-width: 600px;
+    background-color: #f4f0ff; /* Fond violet clair */
+    border: 3px solid #7d5bbe;  /* Bordure violette Herta bien nette */
+    border-radius: 25px;       /* Coins bien arrondis */
+    padding: 20px 40px;
+    box-shadow: 6px 6px 0px #7d5bbe; /* Ombre pleine style "flat design" */
+    text-align: center;
+    position: relative;
+}
+
+
+.bubble-tag {
+    display: block;
+    color: #7d5bbe;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+.herta-bubble p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.back-home {
+    position: fixed; /* Reste visible même quand on scrolle */
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: #7d5bbe; /* Violet Herta */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(125, 91, 190, 0.3);
+    z-index: 1000; /* Passe au-dessus de tout */
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.back-home:hover {
+    background-color: #4b307d; /* Violet plus foncé au survol */
+    transform: translateX(5px); /* Petit mouvement vers la droite */
+    box-shadow: 0 6px 15px rgba(75, 48, 125, 0.4);
+}
+
+.back-home .icon {
+    font-size: 1.1rem;
+}
+
+/* On cache le bouton sur les très petits écrans si besoin, 
+   ou on le rend plus discret */
+@media (max-width: 480px) {
+    .back-home {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}

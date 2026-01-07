@@ -1,0 +1,137 @@
+
+#container{
+  display: grid;
+  height: 80vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 50px 50px 1fr 100px 50px 50px; /* lignes égales */
+  gap: 10px;
+  background-color: purple;
+}
+	 
+#item1 {
+	background-color : #F16B08;
+	grid-column-start: 1;
+	grid-column-end: 4;
+ } 
+
+#item2 {
+	background-color : #B2F109;
+	grid-row: 2 / 6 ;
+	grid-column:1 / 2;	
+}
+
+#item3 {
+	background-color : #23F109;
+	grid-row: 5 / 6;
+	grid-column: 2 / 4;
+}
+
+#item4 {
+	background-color : #3050F0;
+	grid-row: 6 / 7;
+	grid-column: 1 / 4;	
+}
+
+#item5 {
+	background-color : #FBB5E9;
+	grid-row:2 / 3;	
+	grid-column: 2 / 4;	
+}
+
+#item6 {
+	background-color : #0AF1AD;
+	grid-row: 3/5;
+	grid-column:2/3;
+}
+
+#item7 {
+	background-color : #E8F571;
+	grid-row:3 / 4;	
+	grid-column: 3 / 4;		
+}
+
+#item8 {
+	background-color : #31838F;	
+	grid-row:4 / 5;	
+	grid-column: 3 / 4;
+}
+
+
+.comment-section {
+    margin: 60px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.herta-bubble {
+    display: inline-block;
+    max-width: 600px;
+    background-color: #f4f0ff; /* Fond violet clair */
+    border: 3px solid #7d5bbe;  /* Bordure violette Herta bien nette */
+    border-radius: 25px;       /* Coins bien arrondis */
+    padding: 20px 40px;
+    box-shadow: 6px 6px 0px #7d5bbe; /* Ombre pleine style "flat design" */
+    text-align: center;
+    position: relative;
+}
+
+
+.bubble-tag {
+    display: block;
+    color: #7d5bbe;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+.herta-bubble p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.back-home {
+    position: fixed; /* Reste visible même quand on scrolle */
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: #7d5bbe; /* Violet Herta */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(125, 91, 190, 0.3);
+    z-index: 1000; /* Passe au-dessus de tout */
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.back-home:hover {
+    background-color: #4b307d; /* Violet plus foncé au survol */
+    transform: translateX(5px); /* Petit mouvement vers la droite */
+    box-shadow: 0 6px 15px rgba(75, 48, 125, 0.4);
+}
+
+.back-home .icon {
+    font-size: 1.1rem;
+}
+
+/* On cache le bouton sur les très petits écrans si besoin, 
+   ou on le rend plus discret */
+@media (max-width: 480px) {
+    .back-home {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
